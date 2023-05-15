@@ -143,7 +143,7 @@ fn main() {
     println!("{:?}",s);
 }
 
-fn exec<'a, F: FnMut(&'a str)>(mut f: F)  {
+fn exec<'a, F: FnOnce(&'a str)>(mut f: F)  {
     f("hello")
 }
 ```
